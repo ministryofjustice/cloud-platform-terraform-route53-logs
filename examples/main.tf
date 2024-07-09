@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "route_53_query_logs" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-route53-logs?ref=[version]"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-route53-logs?ref=1.0.0"
   
   is_enabled = true
   vpc_id = module.vpc.vpc_id
