@@ -12,7 +12,7 @@ module "s3_bucket_query_log" {
   restrict_public_buckets = true
 
   versioning = {
-    enabled = true
+    enabled = false
   }
 
   server_side_encryption_configuration = {
