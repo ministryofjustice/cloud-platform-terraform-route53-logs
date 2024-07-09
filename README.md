@@ -1,26 +1,18 @@
-# cloud-platform-terraform-template
+# cloud-platform-terraform-route-53-logs
 
 [![Releases](https://img.shields.io/github/v/release/ministryofjustice/cloud-platform-terraform-template.svg)](https://github.com/ministryofjustice/cloud-platform-terraform-template/releases)
 
-This Terraform module will _create a ..._ for use on the Cloud Platform.
+This Terraform module manages logging of Route53 DNS queries, via Route53 Resolver Query logging. Logs are stored in S3.
 
 ## Usage
 
 ```hcl
-module "template" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-template?ref=version" # use the latest release
+module "route53_query_logs" {
+  source = "github.com/ministryofjustice/cloud-platform-terraform-route53-logs?ref=version" # use the latest release
 
-  # Configuration
-  # ...
-
-  # Tags
-  business_unit          = var.business_unit
-  application            = var.application
-  is_production          = var.is_production
-  team_name              = var.team_name
-  namespace              = var.namespace
-  environment_name       = var.environment
-  infrastructure_support = var.infrastructure_support
+  is_enabled  = true
+  vpc_id      = "my-vpc"
+  bucket_name = "my-bucket-name"
 }
 ```
 
