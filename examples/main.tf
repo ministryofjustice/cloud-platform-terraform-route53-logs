@@ -7,4 +7,5 @@ module "route_53_query_logs" {
   
   is_enabled = true
   vpc_id = "my-vpc-id"
+  bucket_name = "${var.bucket_name}-${var.vpc_name}"
 }
