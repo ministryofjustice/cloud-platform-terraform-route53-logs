@@ -1,5 +1,5 @@
 variable "log_destination_type" {
-  description = "s3 or cloudwatch"
+  description = "Where to store resolver logs. Currently we're only using S3"
   default = "s3"
 }
 
@@ -16,4 +16,9 @@ variable "is_enabled" {
 variable "bucket_name" {
   description = "Name of the S3 bucket to store query logs."
   default = "cloud-platform-route53-resolver-query-logs"
+}
+
+variable "vpc_name" {
+  description = "VPC name will be appended to bucket name"
+  default = ""
 }
