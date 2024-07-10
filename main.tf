@@ -4,7 +4,7 @@ module "s3_bucket_query_log" {
   
   count = var.is_enabled ? 1 : 0
 
-  bucket = var.bucket_name
+  bucket = "${var.bucket_name}-${var.vpc_name}"
 
   block_public_acls       = true
   block_public_policy     = true
