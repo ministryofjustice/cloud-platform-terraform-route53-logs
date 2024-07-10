@@ -10,11 +10,7 @@ module "s3_bucket_query_log" {
   block_public_policy     = true
   ignore_public_acls      = true
   restrict_public_buckets = true
-
-  versioning = {
-    enabled = false
-  }
-
+  
   server_side_encryption_configuration = {
     rule = {
       apply_server_side_encryption_by_default = {
