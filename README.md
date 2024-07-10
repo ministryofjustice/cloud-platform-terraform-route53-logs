@@ -50,8 +50,9 @@ See the [examples/](examples/) folder for more information.
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | Name of the S3 bucket to store query logs. | `string` | `"cloud-platform-route53-resolver-query-logs"` | no |
 | <a name="input_is_enabled"></a> [is\_enabled](#input\_is\_enabled) | switch to enable/disable the module, defaults to false | `bool` | `false` | no |
-| <a name="input_log_destination_type"></a> [log\_destination\_type](#input\_log\_destination\_type) | s3 or cloudwatch | `string` | `"s3"` | no |
+| <a name="input_log_destination_type"></a> [log\_destination\_type](#input\_log\_destination\_type) | Where to store resolver logs. Currently we're only using S3 | `string` | `"s3"` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPC ID for Route53 Resolver query logs source. | `string` | `""` | no |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC name will be appended to bucket name | `string` | `""` | no |
 
 ## Outputs
 
