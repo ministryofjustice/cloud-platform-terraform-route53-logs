@@ -1,6 +1,6 @@
 module "s3_bucket_query_log" {
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "3.15.1"
+  version = "4.2.1"
   
   count = var.is_enabled ? 1 : 0
 
